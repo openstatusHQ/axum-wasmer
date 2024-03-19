@@ -1,0 +1,17 @@
+[[module]]
+name = "wasix-axum"
+source = "target/wasm32-wasmer-wasi/release/wasix-axum.wasm"
+
+[[command]]
+name = "wasix-axum"
+module = "wasix-axum"
+runner = "wasi@unstable_"
+
+[package]
+name = "thibaultleouay/axum-wasmer"
+version = "0.1.3"
+description = "Package for wasmer axum starter"
+wasmer-extra-flags = "--net --enable-threads --enable-bulk-memory"
+repository = "https://github.com/openstatusHQ/axum-wasmer"
+
+[dependencies]
